@@ -56,7 +56,7 @@
 
 skip_step <- TRUE
 threshold_csv <- "thresholds.csv"
-in_format <- "WQdashboard"
+in_format <- "ri_ww"
 
 # CODE - DO NOT EDIT BELOW THIS LINE -------------------------------------------
 devtools::load_all()

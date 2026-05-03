@@ -58,7 +58,7 @@
 #' @noRd
 
 results_csv <- "categorical_results.csv"
-in_format <- "WQdashboard"
+in_format <- "ri_ww"
 
 date_format <- "m/d/Y"
 timezone <- Sys.timezone()
@@ -154,4 +154,4 @@ message("Done")
 rm(list = ls(all.names = TRUE))
 
 # Go to next page
-rstudioapi::navigateToFile("data-raw/07_preview.R")
+rstudioapi::navigateToFile("data-raw/08_preview.R")

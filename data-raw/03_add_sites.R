@@ -28,8 +28,8 @@
 #' @noRd
 
 sites_csv <- "sites.csv"
-in_format <- "WQdashboard"
-default_state <- NA
+in_format <- "ri_ww"
+default_state <- "Rhode Island"
 
 # CODE - DO NOT EDIT BELOW THIS LINE -------------------------------------------
 devtools::load_all()

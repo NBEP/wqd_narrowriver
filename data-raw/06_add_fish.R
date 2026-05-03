@@ -1,50 +1,16 @@
 #' Add/Update Result Data
 #'
-#' @description Run this script to add or update result data. ONLY INCLUDE
+#' @description Run this script to add or update fish data. ONLY INCLUDE
 #' NUMERIC RESULTS. Result data must be saved as a csv file in the `data-raw`
-#' folder. The following formats are supported:
+#' folder.
 #'
-#' * WQdashboard
-#' * WQX
-#' * MassWateR
-#' * Maine DEP (ME_DEP)
-#' * RI DEM (RI_DEM)
-#' * RI Watershed Watch (RI_WW)
-#' * Blackstone River Coalition (MA_BRC)
-#' * Friends of Casco Bay (ME_FOCB)
-#'
-#' To use a custom, unsupported format, set `in_format` to "custom" and update
-#' the following files:
-#' * `data-raw/custom_format/colnames_results.csv`
-#' * `data-raw/custom_format/varnames_activity.csv`
-#' * `data-raw/custom_format/varnames_parameters.csv`
-#' * `data-raw/custom_format/varnames_qualifiers.csv`
-#' * `data-raw/custom_format/varnames_units.csv`
-#'
-#' If you would like to use the official WQdashboard format, a template can be
-#' found here:
-#' `inst/extdata/template_results.csv`
+#' IMPORTANT. This is a custom script for fish data containing two columns:
+#' Year, Quantity. Fish data should be saved as a csv file in the data-raw
+#' folder.
 #'
 #' @param results_csv Name of CSV file containing result data.
-#' @param in_format Input format. Accepted formats: WQdashboard, WQX, MassWateR,
-#' RI_DEM, RI_WW, MA_BRC, ME_DEP, ME_FOCB, Custom
-#'
-#' @param date_format Format used for "Date" column. List of abbreviations:
-#'
-#' * B - Full month name (August)
-#' * b - Abbreviated month name (Aug)
-#' * m - Month, numeric (8)
-#' * d - Day of the month
-#' * y - Year without century (26)
-#' * Y - Year with century (2026)
-#'
-#' * H - Hour
-#' * m - Minute
-#' * S - Second
-#' * p - AM/PM
-#' * z - Timezone
-#'
-#' @param timezone Timezone.
+#' @param fish_species Fish species.
+#' @param site_id Site ID.
 #'
 #' @param overwrite_existing If `TRUE`, replaces old result data with new data.
 #' If `FALSE`, combines old and new result data.
@@ -56,9 +22,8 @@
 #' @noRd
 
 results_csv <- "data.csv"
-in_format <- "ri_ww"
-date_format <- "m/d/Y"
-timezone <- Sys.timezone()
+fish_species <- "River Herring"
+site_id <- NA
 
 overwrite_existing <- FALSE
 recalculate_score <- FALSE
@@ -71,46 +36,9 @@ library("readr")
 # Import, format data ----
 df_raw <- readr::read_csv(
   paste0("data-raw/", results_csv),
-  show_col_types = FALSE,
-  guess_max = Inf
-)
-
-if (in_format == "custom") {
-  df_colnames <- readr::read_csv(
-    "data-raw/custom_format/colnames_results.csv",
-    show_col_types = FALSE
-  )
-  df_param <- readr::read_csv(
-    "data-raw/custom_format/varnames_parameters.csv",
-    show_col_types = FALSE
-  )
-  df_unit <- readr::read_csv(
-    "data-raw/custom_format/varnames_units.csv",
-    show_col_types = FALSE
-  )
-  df_qual <- readr::read_csv(
-    "data-raw/custom_format/varnames_qualifiers.csv",
-    show_col_types = FALSE
-  )
-  df_activity <- readr::read_csv(
-    "data-raw/custom_format/varnames_activity.csv",
-    show_col_types = FALSE
-  )
-
-  df_raw <- df_raw |>
-    importwqd::prep_results(
-      df_colnames, df_param, df_unit, df_qual, df_activity
-    ) |>
-    wqformat::format_wqd_results(date_format)
-} else if (in_format == "wqdashboard") {
-  df_raw <- wqformat::format_wqd_results(df_raw, date_format)
-} else {
-  df_raw <- df_raw |>
-    wqformat::format_results(
-      in_format, "wqdashboard", date_format, timezone,
-      drop_extra_col = FALSE
-    )
-}
+  show_col_types = FALSE
+) |>
+  format_fish(fish_species, site_id)
 
 # QAQC data ----
 df_qaqc <- importwqd::qaqc_results(df_raw, df_sites_all)
@@ -210,6 +138,5 @@ message("Done")
 rm(list = ls(all.names = TRUE))
 
 # Go to next page
-rstudioapi::navigateToFile("data-raw/06_add_fish.R")
 rstudioapi::navigateToFile("data-raw/07_add_categorical_results.R")
 rstudioapi::navigateToFile("data-raw/08_preview.R")
