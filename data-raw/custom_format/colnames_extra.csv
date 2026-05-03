@@ -1,0 +1,11 @@
+WQdashboard,WQdashboard_short,Blackstone_River_Coalition
+Site_ID,Site_ID,SITE_BRC_CODE
+Activity_Type,,
+Date,Date,DATE_TIME
+Depth,,
+Depth_Unit,,
+Depth_Category,,
+Parameter,Parameter,PARAMETER
+Result,Result,RESULT
+Result_Unit,,
+Qualifier,,

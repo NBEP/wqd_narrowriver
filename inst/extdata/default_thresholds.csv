@@ -1,0 +1,53 @@
+State,Group,Site,Depth,Parameter,Unit,Calculation,Min,Max,Excellent,Good,Fair,Best
+CT,Saltwater,,,Ammonia,ug/L,mean,,35,,,,
+CT,Saltwater,,,Dissolved oxygen,mg/L,min,3,,4.8,4.8,3,high
+CT,Saltwater,,,Enterococcus,cfu/100mL,mean,,35,,,,
+CT,Saltwater,,,Fecal Coliform,cfu/100mL,mean,,88,14,88,88,low
+CT,Saltwater,,,pH,None,mean,6.8,8.5,,,,
+CT,Saltwater,,,"Temperature, water",deg F,max,,83,,,,
+CT,,,,Dissolved oxygen,mg/L,min,5,,,,,
+CT,,,,E. coli,cfu/100mL,mean,,126,,,,
+CT,,,,pH,None,mean,6.5,8,,,,
+CT,,,,Sodium,mg/L,max,,20,,,,
+CT,,,,"Temperature, water",deg F,max,,85,,,,
+CT,,,,Total Coliform,cfu/100mL,mean,,100,,,,
+MA,Coldwater,,,Dissolved oxygen,mg/L,min,6,,6,6,3,high
+MA,Coldwater,,,"Temperature, water",deg F,max,,68,68,68,85,low
+MA,Saltwater,,,Dissolved oxygen,mg/L,min,5,,6,5,4,high
+MA,Saltwater,,,Fecal Coliform,cfu/100mL,mean,,88,14,88,1000,low
+MA,Saltwater,,,pH,None,mean,6.5,8.5,,,,
+MA,Saltwater,,,"Temperature, water",deg F,max,,85,,,,
+MA,Warmwater,,,Dissolved oxygen,mg/L,min,5,,5,5,3,high
+MA,Warmwater,,,"Temperature, water",deg F,max,,83,83,83,85,low
+MA,,,,Enterococcus,cfu/100mL,mean,,35,,,,
+MA,,,,E. coli,cfu/100mL,mean,,126,,,,
+MA,,,,Fecal Coliform,cfu/100mL,mean,,20,20,20,1000,low
+MA,,,,pH,None,mean,6.5,8.3,,,,
+MA,,,,Total Coliform,cfu/100mL,mean,,100,,,,
+RI,Coldwater,,,Dissolved oxygen,mg/L,min,5,,8,6.5,5,high
+RI,Coldwater,,,Dissolved oxygen saturation,%,mean,75,,,,,
+RI,Coldwater,,,"Temperature, water",deg F,max,,68,,,,
+RI,Saltwater,,Surface,Dissolved oxygen,mg/L,min,4.8,,,,,
+RI,Saltwater,,,Enterococcus,cfu/100mL,mean,,35,,,,
+RI,Saltwater,,,Fecal Coliform,cfu/100mL,mean,,50,14,50,50,low
+RI,Saltwater,,,pH,None,mean,6.5,8.5,,,,
+RI,Saltwater,,,"Temperature, water",deg F,max,,83,,,,
+RI,Warmwater,,,Dissolved oxygen,mg/L,min,5,,,,,
+RI,Warmwater,,,Dissolved oxygen saturation,%,mean,60,,,,,
+RI,Warmwater,,,"Temperature, water",deg F,max,,83,,,,
+RI,,,,Enterococcus,cfu/100mL,mean,,54,33,54,54,low
+RI,,,,Fecal Coliform,cfu/100mL,mean,,200,,,,
+RI,,,,pH,None,mean,6.5,9,,,,
+RI,,,,"Total Phosphorus, mixed forms",mg/L,mean,,0.025,,,,
+,Coldwater,,,Dissolved oxygen,mg/L,min,8,,8,5,4,high
+,Saltwater,,,Enterococcus,cfu/100mL,mean,,35,,,,
+,Saltwater,,,pH,None,mean,6.5,8.5,,,,
+,Saltwater,,,"Total Phosphorus, mixed forms",ug/L,max,,0.1,,,,
+,Saltwater,,,"Temperature, water",deg F,max,,85,,,,
+,Warmwater,,,Dissolved oxygen,mg/L,min,5,,5,5,3,high
+,,,,Alkalinity,mg/L,min,20,,,,,
+,,,,Chloride,mg/L,mean,,230,,,,
+,,,,E. coli,cfu/100mL,mean,,126,,,,
+,,,,Enterococcus,cfu/100mL,mean,,33,,,,
+,,,,Nitrate,mg/L,max,,10,,,,
+,,,,pH,None,mean,6.5,9,,,,

@@ -1,0 +1,14 @@
+wqdashboard,Custom,Mandatory?,Description
+Site_ID,,x,Site ID. Must match values in site metadata.
+Activity_Type,,,"Activity type, eg Field Msr/Obs, Sample-Routine, Quality Control Field Replicate Msr/Obs. To avoid skewing data, quality control samples are excluded from analysis."
+Date,,x,Date
+Depth,,,Depth at which sample was collected. Used to calculate Depth_Category if Depth_Category is blank.
+Depth_Unit,,,"Depth unit. Mandatory if ""Depth"" is filled out. Accepted values: feet, meters"
+Depth_Category,,,"Depth category. Standard values: Surface, Midwater, Near Bottom, Bottom"
+Parameter,,x,Parameter name
+Result,,x,Result value
+Result_Unit,,x,Result unit
+Lower_Detection_Limit,,,"Lower detection limit. If the qualifier code indicates a result is below the detection limit, it will be set to half the detection limit. If this value is blank, results below the detection limit will be set to 0."
+Upper_Detection_Limit,,,"Upper detection limit. If the qualifier code indicates a result is above the detection limit, it will be set to the upper detection limit. If this value is blank, results above the detection limit will be excluded from analysis."
+Detection_Limit_Unit,,,"Unit for the lower and upper detection limits. Mandatory if ""Lower_Detection_Limit"" or ""Upper_Detection_Limit"" is filled out."
+Qualifier,,,"Qualifier code. If the qualifier code indicates a result is above or below the detection limit, the result value will be modified (see ""Lower_Detection_Limit"", ""Upper_Detection_Limit""). Results that have any other qualifier code are excluded from analysis."

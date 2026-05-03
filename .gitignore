@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+data-raw/test_*
+data-raw/shp/test_*
+inst/app/www/*.html
+/rsconnect
+TinyTeX.zip
+*.pdf
+/doc/
+/Meta/
+/dev

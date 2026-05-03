@@ -1,0 +1,35 @@
+meta:
+  name: Narragansett Bay Estuary Program
+  title: Water Quality Dashboard
+
+color:
+  palette:
+    aqua: "#0D7CA9"
+    dark-aqua: "#0d5d82"
+    black: "#1A1A1A"
+  primary: aqua
+  secondary: dark-aqua
+
+typography:
+  fonts:
+    - family: Roboto
+      source: google
+    - family: Roboto Mono
+      source: google
+    - family: Open Sans
+      source: google
+  base:
+    family: Roboto
+    size: 17px
+    weight: 400
+    line-height: 1.5
+  headings:
+    family: Open Sans
+    weight: 400
+    line-height: 1.2
+    style: normal
+    color: dark-aqua
+  monospace:
+    family: Roboto Mono
+    size: 0.9em
+    weight: 400

@@ -1,0 +1,15 @@
+---
+format: 
+  html:
+    output-file: Download.html
+    minimal: true
+engine: knitr
+brand: false
+params:
+  org_name: NA
+  year_updated: NA
+---
+
+# Suggested Citation
+
+`r params$org_name`. (`r params$year_updated`). Water Quality Dashboard. Web.

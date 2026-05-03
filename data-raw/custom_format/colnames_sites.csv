@@ -1,0 +1,12 @@
+wqdashboard,Custom,Mandatory?,Description
+Site_ID,,x,Site ID. Must be unique values.
+Site_Name,,x,Site name
+Latitude,,x,Latitude
+Longitude,,x,Longitude
+Town,,,Town name
+State,,,State name or abbreviation
+Watershed,,,Watershed name
+Group,,,"Category used to compare site samples to local, state, and federal thresholds. Accepted values: Warmwater, Coldwater, Saltwater"
+Max_Surface_Depth_m,,,Maximum depth (meters) for surface samples. Default value is 1.
+Max_Midwater_Depth_m,,,Maximum depth (meters) for midwater samples. Default value is Max_Depth_m - 1.
+Max_Depth_m,,,Maximum site depth (meters)

@@ -1,0 +1,16 @@
+---
+format: 
+  html:
+    output-file: About.html
+    minimal: true
+engine: knitr
+brand: false
+---
+
+# About this Site
+
+Water Quality Dashboard lets you explore the state of the watershed through interactive maps, report cards, and graphs. Check the water quality near where you live and see how it has changed over time.
+
+## How are scores calculated?
+
+Scores are calculated using state or site specific thresholds. The scoring system is designed to provide a rough approximation of the health of the watershed, but should not be mistaken for official guidance or classifications. For up to date, official information on which waterbodies are healthy or impaired, go to [How's My Waterway?](https://mywaterway.epa.gov/)
