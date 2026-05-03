@@ -1,12 +1,11 @@
-#' Add/Update Result Data
+#' Add/Update Fish Data
 #'
 #' @description Run this script to add or update fish data. ONLY INCLUDE
 #' NUMERIC RESULTS. Result data must be saved as a csv file in the `data-raw`
 #' folder.
 #'
 #' IMPORTANT. This is a custom script for fish data containing two columns:
-#' Year, Quantity. Fish data should be saved as a csv file in the data-raw
-#' folder.
+#' `Year`, `Quantity`.
 #'
 #' @param results_csv Name of CSV file containing result data.
 #' @param fish_species Fish species.
