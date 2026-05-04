@@ -22,9 +22,9 @@ embedded website.
 
 ## Installation
 
-For those with a GitHub account, select “Use this template” to create a
-new repository. Else, select “Code” \> “Download ZIP” to download the
-code.
+This is a fork of the base WQdashboard repository. To use WQdashboard,
+please check the [original
+repository](https://github.com/NBEP/WQdashboard).
 
 The “data-raw” folder includes detailed instructions on how to upload
 data and customize WQdashboard to suit your needs. Start with
