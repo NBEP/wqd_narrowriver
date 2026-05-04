@@ -11,8 +11,8 @@
 #' @param fish_species Fish species.
 #' @param site_id Site ID.
 #'
-#' @param overwrite_existing If `TRUE`, replaces old result data with new data.
-#' If `FALSE`, combines old and new result data.
+#' @param overwrite_existing If `TRUE`, removes old data for `fish_species` and
+#' replaces it with new data. If `FALSE`, combines old and new fish data.
 #' @param recalculate_score If `TRUE`, recalculates all parameter scores,
 #' including for old data. If `FALSE`, does not recalculate old scores.
 #' @param update_citation If `TRUE`, will update the "year_updated" variable
@@ -44,8 +44,14 @@ df_qaqc <- importwqd::qaqc_results(df_raw, df_sites_all)
 chk_years <- unique(df_qaqc$Year)
 
 # Combine datasets (if overwrite_existing is FALSE)
-if (!overwrite_existing && exists("df_data_all") && nrow(df_data_all) > 0) {
-  df_qaqc <- dplyr::bind_rows(df_data_all, df_qaqc) |>
+if (exists("df_data_all") && nrow(df_data_all) > 0) {
+  df_temp <- df_data_all
+
+  if (overwrite_existing) {
+    df_temp <- dplyr::filter(df_data_all, .data$Parameter != !!fish_species)
+  }
+
+  df_qaqc <- dplyr::bind_rows(df_temp, df_qaqc) |>
     unique() |>
     wqformat::standardize_units(
       "Parameter",
