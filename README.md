@@ -3,15 +3,6 @@
 
 # WQdashboard
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Codecov test
-coverage](https://codecov.io/gh/NBEP/WQdashboard/graph/badge.svg)](https://app.codecov.io/gh/NBEP/WQdashboard)
-[![R-CMD-check](https://github.com/NBEP/WQdashboard/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NBEP/WQdashboard/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
 WQdashboard is an open-source dashboard template that can be used to
 display water quality data using interactive maps, report cards, and
 graphs. No coding knowledge required! This tool accepts multiple
