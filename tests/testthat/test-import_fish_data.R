@@ -20,9 +20,9 @@ test_that("format_fish works", {
     Activity_Type = "Field Msr/Obs",
     Parameter = "River Herring",
     Result_Unit = "None",
+    Depth_Category = "Surface",
     Depth = NA,
     Depth_Unit = NA,
-    Depth_Category = NA,
     Lower_Detection_Limit = NA,
     Upper_Detection_Limit = NA,
     Detection_Limit_Unit = NA,
@@ -31,7 +31,7 @@ test_that("format_fish works", {
 
   # Basic check - function works
   expect_equal(
-    format_fish(df_in, "River Herring", "foo"),
+    format_fish(df_in, "River Herring", "None", "foo"),
     df_out
   )
 
@@ -58,7 +58,7 @@ test_that("format_fish works", {
   df_in$Year[4] <- 26
 
   expect_error(
-    format_fish(df_in, "River Herring", "foo"),
+    format_fish(df_in, "River Herring", "None", "foo"),
     regexp = "Invalid year. Check rows: 1, 4"
   )
 })

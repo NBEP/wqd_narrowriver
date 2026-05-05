@@ -20,9 +20,10 @@
 #'
 #' @noRd
 
-results_csv <- "data.csv"
+results_csv <- "river_herring.csv"
 fish_species <- "River Herring"
-site_id <- NA
+fish_unit <- "fish per year"
+site_id <- "ridem_gss"
 
 overwrite_existing <- FALSE
 recalculate_score <- FALSE
@@ -37,7 +38,7 @@ df_raw <- readr::read_csv(
   paste0("data-raw/", results_csv),
   show_col_types = FALSE
 ) |>
-  format_fish(fish_species, site_id)
+  format_fish(fish_species, fish_unit, site_id)
 
 # QAQC data ----
 df_qaqc <- importwqd::qaqc_results(df_raw, df_sites_all)
@@ -66,13 +67,6 @@ if (exists("df_data_all") && nrow(df_data_all) > 0) {
       warn_only = FALSE
     ) |>
     unique()
-}
-
-if (nrow(df_qaqc) > 250000) {
-  warning(
-    "Large dataset. Website may experience performance issues.",
-    call. = FALSE
-  )
 }
 
 # Upload df_data_all
