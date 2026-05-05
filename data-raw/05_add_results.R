@@ -55,7 +55,7 @@
 #'
 #' @noRd
 
-results_csv <- "results.csv"
+results_csv <- "results_2024.csv"
 in_format <- "ri_ww"
 date_format <- "m/d/Y"
 timezone <- Sys.timezone()

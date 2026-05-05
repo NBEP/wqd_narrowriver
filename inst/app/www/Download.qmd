@@ -12,4 +12,4 @@ params:
 
 # Suggested Citation
 
-Narrow River Preservation Association. (`r params$year_updated`). Water Quality Dashboard. Web.
+Narrow River Preservation Association. (`r params$year_updated`). Watershed Quality Dashboard. Web.
