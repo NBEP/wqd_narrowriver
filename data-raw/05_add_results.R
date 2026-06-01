@@ -55,7 +55,7 @@
 #'
 #' @noRd
 
-results_csv <- "results_2024.csv"
+results_csv <- "results.csv"
 in_format <- "ri_ww"
 date_format <- "m/d/Y"
 timezone <- Sys.timezone()
@@ -162,7 +162,7 @@ usethis::use_data(df_data, overwrite = TRUE)
 message("Saved df_data")
 
 # Calculate scores ----
-chk <- !overwrite_existing & !recalculate_score & exists("df_score") &
+chk <- !overwrite_existing && !recalculate_score && exists("df_score") &&
   nrow(df_score) > 0
 if (chk) {
   df_temp <- dplyr::filter(df_temp, .data$Year %in% chk_years)

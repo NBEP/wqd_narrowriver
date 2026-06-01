@@ -18,16 +18,7 @@ app_ui <- function(request) {
       id = "tabset",
       sidebar = bslib::sidebar(
         id = "sbar",
-        open = FALSE,
         importwqd::mod_sidebar_ui("sidebar", varlist)
-      ),
-      bslib::nav_panel(
-        "About",
-        value = "about",
-        class = "bslib-page-dashboard",
-        bslib::card(
-          uiOutput("qmd_about")
-        )
       ),
       bslib::nav_panel("Map",
         value = "map",

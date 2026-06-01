@@ -193,28 +193,3 @@
 #' @format HTML text
 "qmd_download"
 
-#' Default UI dropdown values
-#'
-#' A list of default values for the various dropdown menus in the sidebar and
-#' on the graph tab.
-#'
-#' @format A list with 13 columns:
-#'  \describe{
-#'    \item{state}{List of states}
-#'    \item{town}{List of towns}
-#'    \item{watershed}{List of watersheds}
-#'    \item{site_id}{List of site IDs}
-#'    \item{site_name}{List of site names}
-#'    \item{loc_choices}{List of toggle options. Possible values: "blank",
-#'    "By Town" = "town", "By State" = "town", "By Watershed" = "watershed"}
-#'    \item{loc_tab}{Name of hidden tab for importwqd:::mod_sidebar_location.
-#'    Possible values: "notoggle", "toggle", "blank"}
-#'    \item{param}{List of parameters}
-#'    \item{param_score}{List of parameters that have been assigned a score}
-#'    \item{param_cat}{List of download only/categorical parameters}
-#'    \item{depth}{List of depths. Possible values: Surface, Midwater,
-#'    Near Bottom, Bottom}
-#'    \item{year}{List of years}
-#'    \item{month}{List of months}
-#'  }
-"varlist"

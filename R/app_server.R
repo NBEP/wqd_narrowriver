@@ -5,12 +5,6 @@
 #' @import shiny
 #' @noRd
 app_server <- function(input, output, session) {
-  # About tab ----
-  output$qmd_about <- renderUI({
-    qmd_about
-  }) |>
-    bindCache(qmd_about)
-
   # Sidebar module ----
   sidebar_var <- importwqd::mod_sidebar_server(
     "sidebar",
@@ -22,19 +16,6 @@ app_server <- function(input, output, session) {
     }),
     selected_site = map_var$site
   )
-
-  observe({
-    if (input$tabset == "about") {
-      bslib::toggle_sidebar("sbar", open = FALSE)
-      golem::invoke_js("hideclass", "sidebar")
-      golem::invoke_js("hideclass", "collapse-toggle")
-    } else {
-      bslib::toggle_sidebar("sbar", open = TRUE)
-      golem::invoke_js("showclass", "sidebar")
-      golem::invoke_js("showclass", "collapse-toggle")
-    }
-  }) |>
-    bindEvent(input$tabset)
 
   # Map module ----
   map_bounds <- list(

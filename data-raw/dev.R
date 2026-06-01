@@ -148,7 +148,7 @@ if (!exists("varlist")) {
     year = 2026,
     month = "March"
   )
-  usethis::use_data(varlist)
+  usethis::use_data(varlist, internal = TRUE)
 }
 
 # Clean up ----
