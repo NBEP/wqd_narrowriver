@@ -13,7 +13,6 @@ app_ui <- function(request) {
     # Your application UI logic
     bslib::page_navbar(
       theme = bslib::bs_theme(brand = brand),
-      useBusyIndicators(),
       title = h1(brand$meta$title),
       id = "tabset",
       sidebar = bslib::sidebar(
